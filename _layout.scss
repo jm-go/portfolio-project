@@ -1,0 +1,130 @@
+@use "./variables" as *;
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    padding: 1rem;
+    align-items: center;
+
+    &__name {
+        //justify-self: center;
+        font-family: $font-headers;
+        font-weight: 700;
+        font-size: 24px;
+        margin-bottom: 2.5em;
+    }
+
+    &__links {
+        display: none;
+        //display: flex; /* Hidden in mobile view */
+        font-family: $font-body;
+
+        &__link {
+            margin-left: 10px;
+            margin-right: 10px;
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+}
+
+/* Header, About, Portfolio, Contact */
+.header,
+.about,
+.portfolio,
+.contact {
+    padding: 1rem;
+    text-align: center;
+}
+
+.header {
+    text-align: left;
+    padding: 1rem;
+
+    &__title {
+        font-family: $font-headers;
+        margin-bottom: 5rem;
+        font-weight: 400;
+        font-size: 4.5rem;
+        margin: 0 0.5rem; 
+    }
+
+    &__description {
+        //justify-self: flex-start;
+        font-size: 16px;
+        margin-top: 4.5rem;
+        margin-left: 0.5rem;
+        
+    }
+}
+
+.about {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: left;
+    margin: 1rem 1rem;
+
+    &__title {
+        font-family: $font-headers;
+        font-weight: 700;
+        font-size: 32px;
+        text-align: left;
+        margin-left: 0.5rem;
+    }
+
+    &__image {
+        max-width: 100%;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        justify-self: unset;
+    }
+
+    &__about-text {
+        font-size: 16px;
+        margin-left: 0.5rem;
+        margin-bottom: 0.5rem;
+        width: 100%;
+    }
+}
+
+/* Skills - hidden in mobile view */
+.skills {
+    display: none;
+}
+
+.portfolio {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 1rem 1rem;
+
+    &__title {
+        font-family: $font-headers;
+        font-weight: 700;
+        font-size: 32px;
+        text-align: left;
+        margin-left: 0.5rem;
+    }
+}
+
+
+/* Media Query for larger screens */
+@media screen and (min-width: 768px) {
+
+    .navbar {
+        justify-content: space-between;
+
+        &__link {
+            display: inline-block;
+            /* Show navbar links */
+            margin-left: 1rem;
+        }
+    }
+
+}
+
+/* TO DO - Adjust layout for larger screens */
