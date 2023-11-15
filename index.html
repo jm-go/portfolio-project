@@ -7,74 +7,88 @@
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
-      <nav>
-        JOWITA GOGOL.
-        <a>About</a>
-        <a>Portfolio</a>
-        <a>Contact</a>
-      </nav>
+    <!-- Navbar block that includes name of the person, and three links. 
+         For mobile view, only name of the person is visible and links are hidden. -->
+    <nav class="navbar">
+      <div class="navbar__name">JOWITA GOGOL.</div>
+      <a class="navbar__link" href="#">About</a>
+      <a class="navbar__link" href="#">Portfolio</a>
+      <a class="navbar__link" href="#">Contact</a>
+    </nav>
 
-    <header>
-        <h1>Junior Software Developer.</h1>
-        <p>
+    <!-- Header block with occupation and description of the person -->
+    <header class="header">
+      <h1 class="header__title">Junior Software Developer.</h1>
+      <p class="header__description">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda sunt
         perspiciatis itaque non enim minus repellendus, aperiam harum porro
         eveniet, laboriosam, facilis nisi. Sunt porro consequuntur, debitis in
         illo laboriosam?
-        </p>
+      </p>
     </header>
 
-    <div class="about">
-        <h2>ABOUT.</h2>
-        <img src="./images/person-placeholder.jpg" alt="Image of person" />
-        <p>
+    <!-- About block. In mobile view, the picture is displayed above the text. 
+         For desktop, the image is on the right side. -->
+    <section class="about">
+      <h2 class="about__title">ABOUT.</h2>
+      <img
+        class="about__image"
+        src="./images/person-placeholder.jpg"
+        alt="Image of person"
+      />
+      <p class="about__text">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error deleniti
         sapiente vel minus possimus animi corrupti velit modi, est vero.
         Consequatur quae optio molestias est eligendi porro quos, deserunt
         tempora? Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
         corrupti aliquam, ut, sunt autem eligendi ducimus error facere eum sint
         maxime reprehenderit enim at ipsum cum quasi ea explicabo distinctio?
-        </p>
-        <br />
-        <p>
+      </p>
+      <p class="about__text">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores quia
         mollitia doloremque ipsam, voluptatum provident alias dolore,
-        reprehenderit impedit nulla numquam sunt saepe quos quasi fuga quo fugiat
-        distinctio! Rem? Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-        Cupiditate nobis unde sapiente eius quis minima, iste veniam, id non
-        accusantium modi culpa cum tenetur? At est possimus magni quibusdam omnis.
-        </p>
-    </div>
+        reprehenderit impedit nulla numquam sunt saepe quos quasi fuga quo
+        fugiat distinctio! Rem? Lorem ipsum dolor sit amet consectetur,
+        adipisicing elit. Cupiditate nobis unde sapiente eius quis minima, iste
+        veniam, id non accusantium modi culpa cum tenetur? At est possimus magni
+        quibusdam omnis.
+      </p>
+    </section>
 
-    <div class="skils">
-        <!-- skills and text to be on the same level for desktop view-->
-        <h2>SKILLS.</h2>
-        <p>
+    <!-- Skills Block. This block is hidden for mobile view. -->
+    <section class="skils">
+      <!-- skills and text to be on the same level for desktop view-->
+      <h2 class="skills__title">SKILLS.</h2>
+      <p class="skills__description">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio,
         consequuntur quibusdam illo fugiat quam sapiente ratione ab vel.
-        </p>
+      </p>
+      <!-- placeholder for skills icons will go here -->
+    </section>
 
-        <!-- placeholder for skills icons?-->
-    </div>
-    <div class="Portfolio">
-        <h2>PORTFOLIO.</h2>
-        <!-- picture goes here-->
-        <a>PROJECT 1</a>
-        <!-- picture goes here -->
-        <a>PROJECT 1</a>
-        <!-- picture goes here -->
-        <a>PROJECT 1</a>
-    </div>
+    <!-- Portfolio block -->
+    <section class="portfolio">
+      <h2 class="portfolio__title">PORTFOLIO.</h2>
+      <!-- picture goes here-->
+      <a>PROJECT 1</a>
+      <!-- picture goes here -->
+      <a>PROJECT 1</a>
+      <!-- picture goes here -->
+      <a>PROJECT 1</a>
+    </section>
 
-    <div class="contact">
-        <h1>GET IN TOUCH.</h1>
-        <button>CONTACT</button>
-    </div>
+    <!-- Contact block -->
+    <section class="contact">
+      <h1 class="contact__heading">GET IN TOUCH.</h1>
+      <button class="contact__button">CONTACT</button>
+    </section>
+
+    <!-- Footer block includes three icons with links -->
     <footer class="footer">
       <!-- footer icons will go here-->
-      <a>icon1</a>
-      <a>icon2</a>
-      <a>icon3</a>
+      <a href="#">icon1</a>
+      <a href="#">icon2</a>
+      <a href="#">icon3</a>
     </footer>
   </body>
 </html>

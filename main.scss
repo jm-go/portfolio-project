@@ -1,0 +1,9 @@
+@use "./variables" as *;
+
+@use "./components";
+@use "./layout";
+
+* {
+    margin: 0;
+    padding: 0;
+}
