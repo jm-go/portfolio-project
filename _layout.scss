@@ -6,14 +6,14 @@
     justify-content: center;
     align-items: center;
     color: black;
-    padding: 1rem;
+    padding: 0.625rem;
     align-items: center;
 
     &__name {
         //justify-self: center;
         font-family: $font-headers;
         font-weight: 700;
-        font-size: 24px;
+        font-size: 1.5rem;
         margin-bottom: 2.5em;
     }
 
@@ -49,15 +49,15 @@
         margin-bottom: 5rem;
         font-weight: 400;
         font-size: 4.5rem;
-        margin: 0 0.5rem; 
+        margin: 0 0.03125rem;
     }
 
     &__description {
         //justify-self: flex-start;
-        font-size: 16px;
-        margin-top: 4.5rem;
-        margin-left: 0.5rem;
-        
+        font-size: 1rem;
+        margin-top: 2.8125rem;
+        margin-left: 0.03125rem;
+
     }
 }
 
@@ -66,20 +66,20 @@
     flex-direction: row;
     flex-wrap: wrap;
     text-align: left;
-    margin: 1rem 1rem;
+    margin: 0.625rem 0.625rem;
 
     &__title {
         font-family: $font-headers;
         font-weight: 700;
-        font-size: 32px;
+        font-size: 2rem;
         text-align: left;
-        margin-left: 0.5rem;
+        margin-left: 0.03125rem;
     }
 
     &__image {
         max-width: 100%;
-        margin-top: 3rem;
-        margin-bottom: 3rem;
+        margin-top: 1.875rem;
+        margin-bottom: 1.875rem;
         justify-self: unset;
     }
 
@@ -97,17 +97,48 @@
 }
 
 .portfolio {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 1rem 1rem;
+    // display: flex;
+    // flex-direction: row;
+    // flex-wrap: wrap;
+    // margin: 1rem 1rem;
+
+    &__project-figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__project-details {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-top: 0.625rem;
+        margin-bottom: 0.9375rem;
+    }
+
+    &__project-buttons {
+        display: flex;
+        gap: 10px;
+    }
+
+    &__project-name {
+        font-family: $font-headers;
+        font-weight: 400;
+        font-size: 2rem;
+    }
 
     &__title {
         font-family: $font-headers;
         font-weight: 700;
-        font-size: 32px;
+        font-size: 2rem;
         text-align: left;
         margin-left: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    &__project-img {
+        max-width: 100%;
     }
 }
 
@@ -123,17 +154,17 @@
         margin-bottom: 5rem;
         font-weight: 400;
         font-size: 4.5rem;
-        margin: 3rem 0.5rem; 
+        margin: 1.875rem 0.03125rem;
     }
 
     &__button {
-        font-size: 18px;
+        font-size: 1.125rem;
         padding: 5px;
         border: 2px solid $color-sky;
         width: 17rem;
         height: 4.5rem;
         background-color: $color-white;
-        margin-bottom: 3rem;
+        margin-bottom: 1.875rem;
         align-self: center;
     }
 }
@@ -143,7 +174,7 @@
     flex-direction: row;
     justify-content: center;
     align-content: center;
-    padding: 1rem;
+    padding: 1.5rem;
     background-color: $color-black;
 
     &__icon {
@@ -151,7 +182,7 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        margin: 0 0.5rem;
+        margin: 0 0.45rem;
     }
 
     &__icon-img {
@@ -162,6 +193,11 @@
 
 /* Media Query for larger screens */
 @media screen and (min-width: 768px) {
+
+    html {
+        font-size: 18px;
+        /* Slightly larger base font size on larger screens */
+    }
 
     .navbar {
         justify-content: space-between;

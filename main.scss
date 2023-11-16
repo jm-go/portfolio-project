@@ -12,3 +12,9 @@
     color: $color-sky;
     text-decoration: none;
 }
+
+/* this base font size allows to control the scaling across the whole project */
+html,
+body {
+    font-size: 16px;
+}

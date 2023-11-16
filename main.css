@@ -8,13 +8,13 @@
   justify-content: center;
   align-items: center;
   color: black;
-  padding: 1rem;
+  padding: 0.625rem;
   align-items: center;
 }
 .navbar__name {
   font-family: "Cormorant", sans-serif;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 1.5rem;
   margin-bottom: 2.5em;
 }
 .navbar__links {
@@ -46,12 +46,12 @@
   margin-bottom: 5rem;
   font-weight: 400;
   font-size: 4.5rem;
-  margin: 0 0.5rem;
+  margin: 0 0.03125rem;
 }
 .header__description {
-  font-size: 16px;
-  margin-top: 4.5rem;
-  margin-left: 0.5rem;
+  font-size: 1rem;
+  margin-top: 2.8125rem;
+  margin-left: 0.03125rem;
 }
 
 .about {
@@ -59,19 +59,19 @@
   flex-direction: row;
   flex-wrap: wrap;
   text-align: left;
-  margin: 1rem 1rem;
+  margin: 0.625rem 0.625rem;
 }
 .about__title {
   font-family: "Cormorant", sans-serif;
   font-weight: 700;
-  font-size: 32px;
+  font-size: 2rem;
   text-align: left;
-  margin-left: 0.5rem;
+  margin-left: 0.03125rem;
 }
 .about__image {
   max-width: 100%;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-top: 1.875rem;
+  margin-bottom: 1.875rem;
   justify-self: unset;
 }
 .about__about-text {
@@ -86,18 +86,38 @@
   display: none;
 }
 
-.portfolio {
+.portfolio__project-figure {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin: 1rem 1rem;
+  flex-direction: column;
+  align-items: center;
+}
+.portfolio__project-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 0.625rem;
+  margin-bottom: 0.9375rem;
+}
+.portfolio__project-buttons {
+  display: flex;
+  gap: 10px;
+}
+.portfolio__project-name {
+  font-family: "Cormorant", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
 }
 .portfolio__title {
   font-family: "Cormorant", sans-serif;
   font-weight: 700;
-  font-size: 32px;
+  font-size: 2rem;
   text-align: left;
   margin-left: 0.5rem;
+  margin-bottom: 1rem;
+}
+.portfolio__project-img {
+  max-width: 100%;
 }
 
 .contact {
@@ -112,16 +132,16 @@
   margin-bottom: 5rem;
   font-weight: 400;
   font-size: 4.5rem;
-  margin: 3rem 0.5rem;
+  margin: 1.875rem 0.03125rem;
 }
 .contact__button {
-  font-size: 18px;
+  font-size: 1.125rem;
   padding: 5px;
   border: 2px solid #5670A3;
   width: 17rem;
   height: 4.5rem;
   background-color: #FFFFFF;
-  margin-bottom: 3rem;
+  margin-bottom: 1.875rem;
   align-self: center;
 }
 
@@ -130,7 +150,7 @@
   flex-direction: row;
   justify-content: center;
   align-content: center;
-  padding: 1rem;
+  padding: 1.5rem;
   background-color: #000000;
 }
 .footer__icon {
@@ -138,7 +158,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin: 0 0.5rem;
+  margin: 0 0.45rem;
 }
 .footer__icon-img {
   background-color: transparent;
@@ -146,6 +166,10 @@
 
 /* Media Query for larger screens */
 @media screen and (min-width: 768px) {
+  html {
+    font-size: 18px;
+    /* Slightly larger base font size on larger screens */
+  }
   .navbar {
     justify-content: space-between;
   }
@@ -164,4 +188,10 @@
   font-family: "Inter", sans-serif;
   color: #5670A3;
   text-decoration: none;
+}
+
+/* this base font size allows to control the scaling across the whole project */
+html,
+body {
+  font-size: 16px;
 }/*# sourceMappingURL=main.css.map */
