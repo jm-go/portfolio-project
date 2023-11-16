@@ -15,15 +15,15 @@
   font-family: "Cormorant", sans-serif;
   font-weight: 700;
   font-size: 1.5rem;
-  margin-bottom: 2.5em;
+  margin-bottom: 0.15625rem;
 }
 .navbar__links {
   display: none;
   font-family: "Inter", sans-serif;
 }
 .navbar__links--link {
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 0.625rem;
+  margin-right: 0.625rem;
   text-decoration: none;
   color: inherit;
 }
@@ -75,7 +75,7 @@
   justify-self: unset;
 }
 .about__about-text {
-  font-size: 16px;
+  font-size: 1rem;
   margin-left: 0.5rem;
   margin-bottom: 0.5rem;
   width: 100%;
@@ -101,7 +101,7 @@
 }
 .portfolio__project-buttons {
   display: flex;
-  gap: 10px;
+  gap: 0.625rem;
 }
 .portfolio__project-name {
   font-family: "Cormorant", sans-serif;
@@ -136,7 +136,7 @@
 }
 .contact__button {
   font-size: 1.125rem;
-  padding: 5px;
+  padding: 0.3125rem;
   border: 2px solid #5670A3;
   width: 17rem;
   height: 4.5rem;
