@@ -40,6 +40,7 @@
     text-align: center;
 }
 
+/* Header Section */
 .header {
     text-align: left;
     padding: 1rem;
@@ -61,6 +62,7 @@
     }
 }
 
+/* About Section */
 .about {
     display: flex;
     flex-direction: row;
@@ -91,16 +93,13 @@
     }
 }
 
-/* Skills - hidden in mobile view */
+/* Skills Section - hidden in mobile view */
 .skills {
     display: none;
 }
 
+/* Portfolio Section */
 .portfolio {
-    // display: flex;
-    // flex-direction: row;
-    // flex-wrap: wrap;
-    // margin: 1rem 1rem;
 
     &__project-figure {
         display: flex;
@@ -142,6 +141,7 @@
     }
 }
 
+/* Contact Section */
 .contact {
     display: flex;
     flex-direction: row;
@@ -169,6 +169,7 @@
     }
 }
 
+/* Footer Section */
 .footer {
     display: flex;
     flex-direction: row;
@@ -201,11 +202,23 @@
 
     .navbar {
         justify-content: space-between;
+        margin-top: 2rem;
+        /* Align items on opposite ends */
 
-        &__link {
-            display: inline-block;
-            /* Show navbar links */
-            margin-left: 1rem;
+        &__name {
+            margin: 1rem;
+        }
+
+        &__links {
+            display: flex;
+            align-items: center;
+            /* Vertically align links if navbar has greater height */
+
+            &--link {
+                display: inline-block;
+                margin-left: 2rem;
+                margin-right: 2rem;
+            }
         }
     }
 
