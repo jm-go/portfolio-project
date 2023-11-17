@@ -6,7 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: black;
+  color: #000000;
   padding: 0.625rem;
   align-items: center;
 }
@@ -21,7 +21,7 @@
   font-family: "Inter", sans-serif;
   font-size: 0.9rem;
 }
-.navbar__links--link {
+.navbar__link {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
   text-decoration: none;
@@ -270,6 +270,19 @@
   .skills {
     display: flex;
   }
+  .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .contact__heading {
+    margin-bottom: 2.5rem;
+  }
+  .contact__button {
+    width: 15rem;
+    margin-bottom: 3.5rem;
+  }
 }
 /* TO DO - Adjust layout for larger screens */
 * {
@@ -278,7 +291,7 @@
   background-color: #92A1B5;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
-  color: #25282d;
+  color: #000000;
   text-decoration: none;
 }
 
