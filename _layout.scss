@@ -87,7 +87,7 @@
         max-width: 100%;
         margin-top: 1.875rem;
         margin-bottom: 1.875rem;
-        justify-self: unset;
+        justify-self: center;
     }
 
     &__text {
@@ -101,6 +101,41 @@
 /* Skills Section - hidden in mobile view */
 .skills {
     display: none;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.5rem 2rem;
+    padding: 1rem;
+
+    &__text {
+        display: flex;
+        align-items: center;
+        text-align: justify;
+        gap: 1.5rem;
+        justify-content: space-around;
+    }
+
+    &__title {
+        font-family: $font-headers;
+        font-size: 2rem;
+        color: $color-header;
+    }
+
+    &__icons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    &__icon {
+        margin: 0.3rem;
+        height: 3.1rem;
+        width: 3.1rem;
+        font-size: 1rem;
+    }
+
+
 }
 
 /* Portfolio Section */
@@ -130,7 +165,7 @@
     &__project-name {
         font-family: $font-headers;
         font-weight: 400;
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
 
     &__title {
@@ -251,33 +286,36 @@
     .about {
         display: grid;
         height: auto;
-        grid-template-columns: 1.5fr 1fr; 
-        grid-template-rows: auto 1fr; 
+        grid-template-columns: 1.5fr 1fr;
+        grid-template-rows: auto 1fr;
         gap: 2rem;
         margin: 0 2rem;
 
         &__title {
-            grid-area: title; 
+            grid-area: title;
             align-self: center;
             margin-top: 2rem;
         }
 
         &__text {
-            grid-area: text; 
+            grid-area: text;
             align-self: center;
             margin-bottom: 2rem;
             font-size: 0.8rem;
         }
 
         &__image {
-            grid-area: image; 
-            width: 100%; 
-            height: auto; 
+            grid-area: image;
+            width: 100%;
+            height: auto;
         }
 
-        grid-template-areas: 
-            "title image"
-            "text image";
+        grid-template-areas: "title image"
+        "text image";
+    }
+
+    .skills {
+        display: flex;
     }
 
 }
