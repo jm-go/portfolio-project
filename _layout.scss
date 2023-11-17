@@ -53,6 +53,7 @@
         font-weight: 400;
         font-size: 4.1rem;
         margin: 0 0.03125rem;
+        color: $color-header;
     }
 
     &__description {
@@ -60,6 +61,7 @@
         font-size: 0.9rem;
         margin-top: 2.8125rem;
         margin-left: 0.03125rem;
+
 
     }
 }
@@ -78,6 +80,7 @@
         font-size: 2rem;
         text-align: left;
         margin-left: 0.03125rem;
+        color: $color-header;
     }
 
     &__image {
@@ -107,6 +110,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin: 0.625rem 0.625rem;
     }
 
     &__project-details {
@@ -136,6 +140,7 @@
         text-align: left;
         margin-left: 0.5rem;
         margin-bottom: 1rem;
+        color: $color-header;
     }
 
     &__project-img {
@@ -157,13 +162,14 @@
         font-weight: 400;
         font-size: 4.5rem;
         margin: 1.875rem 0.03125rem;
+        color: $color-header;
     }
 
     &__button {
         font-size: 1.125rem;
         padding: 0.3125rem;
-        border: 2px solid $color-sky;
-        width: 17rem;
+        border: 2px solid $color-header;
+        width: 16rem;
         height: 4.5rem;
         background-color: $color-white;
         margin-bottom: 1.875rem;
