@@ -20,10 +20,11 @@
 .navbar__links {
   display: none;
   font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
 }
 .navbar__links--link {
-  margin-left: 0.625rem;
-  margin-right: 0.625rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
   text-decoration: none;
   color: inherit;
 }
@@ -41,16 +42,18 @@
 .header {
   text-align: left;
   padding: 1rem;
+  margin: 0.625rem 0.625rem;
 }
 .header__title {
   font-family: "Cormorant", sans-serif;
   margin-bottom: 5rem;
   font-weight: 400;
-  font-size: 4.5rem;
+  font-size: 4.1rem;
   margin: 0 0.03125rem;
 }
 .header__description {
-  font-size: 1rem;
+  text-align: justify;
+  font-size: 0.9rem;
   margin-top: 2.8125rem;
   margin-left: 0.03125rem;
 }
@@ -60,7 +63,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  text-align: left;
+  text-align: justify;
   margin: 0.625rem 0.625rem;
 }
 .about__title {
@@ -76,11 +79,10 @@
   margin-bottom: 1.875rem;
   justify-self: unset;
 }
-.about__about-text {
-  font-size: 1rem;
-  margin-left: 0.5rem;
+.about__text {
+  font-size: 0.9rem;
   margin-bottom: 0.5rem;
-  width: 100%;
+  width: auto;
 }
 
 /* Skills Section - hidden in mobile view */
@@ -175,23 +177,62 @@
     font-size: 18px;
     /* Slightly larger base font size on larger screens */
   }
+  p {
+    font-size: 0.8rem;
+  }
   .navbar {
     justify-content: space-between;
-    margin-top: 2rem;
+    margin: 2rem 2rem;
     /* Align items on opposite ends */
   }
   .navbar__name {
-    margin: 1rem;
+    margin: rem;
   }
   .navbar__links {
     display: flex;
     align-items: center;
-    /* Vertically align links if navbar has greater height */
   }
   .navbar__links--link {
     display: inline-block;
-    margin-left: 2rem;
-    margin-right: 2rem;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 2rem;
+  }
+  .header__title {
+    text-align: center;
+    margin: 1rem auto;
+  }
+  .header__description {
+    width: 56%;
+    font-size: 0.8rem;
+  }
+  .about {
+    display: grid;
+    height: auto;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 2rem;
+    margin: 0 2rem;
+    grid-template-areas: "title image" "text image";
+  }
+  .about__title {
+    grid-area: title;
+    align-self: center;
+    margin-top: 2rem;
+  }
+  .about__text {
+    grid-area: text;
+    align-self: center;
+    margin-bottom: 2rem;
+    font-size: 0.8rem;
+  }
+  .about__image {
+    grid-area: image;
+    width: 100%;
+    height: auto;
   }
 }
 /* TO DO - Adjust layout for larger screens */
@@ -206,7 +247,6 @@
 }
 
 /* this base font size allows to control the scaling across the whole project */
-html,
-body {
+html {
   font-size: 16px;
 }/*# sourceMappingURL=main.css.map */

@@ -21,10 +21,11 @@
         display: none;
         //display: flex; /* Hidden in mobile view */
         font-family: $font-body;
+        font-size: 0.9rem;
 
         &--link {
-            margin-left: 0.625rem;
-            margin-right: 0.625rem;
+            margin-left: 1.5rem;
+            margin-right: 1.5rem;
             text-decoration: none;
             color: inherit;
         }
@@ -44,18 +45,19 @@
 .header {
     text-align: left;
     padding: 1rem;
+    margin: 0.625rem 0.625rem;
 
     &__title {
         font-family: $font-headers;
         margin-bottom: 5rem;
         font-weight: 400;
-        font-size: 4.5rem;
+        font-size: 4.1rem;
         margin: 0 0.03125rem;
     }
 
     &__description {
         text-align: justify;
-        font-size: 1rem;
+        font-size: 0.9rem;
         margin-top: 2.8125rem;
         margin-left: 0.03125rem;
 
@@ -85,12 +87,11 @@
         justify-self: unset;
     }
 
-    &__about-text {
-        font-size: 1rem;
-        margin-left: 0.5rem;
+    &__text {
+        font-size: 0.9rem;
         margin-bottom: 0.5rem;
-        width: 100%;
-        
+        width: auto;
+
     }
 }
 
@@ -202,27 +203,24 @@
     }
 
     p {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 
     .navbar {
         justify-content: space-between;
-        margin-top: 2rem;
+        margin: 2rem 2rem;
         /* Align items on opposite ends */
 
         &__name {
-            margin: 1rem;
+            margin: rem;
         }
 
         &__links {
             display: flex;
             align-items: center;
-            /* Vertically align links if navbar has greater height */
 
             &--link {
                 display: inline-block;
-                margin-left: 2rem;
-                margin-right: 2rem;
             }
         }
     }
@@ -231,6 +229,7 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        margin: 0 2rem;
 
         &__title {
             text-align: center;
@@ -238,10 +237,43 @@
         }
 
         &__description {
-            width: 55%;
-            margin-left: 1rem;
+            width: 56%;
+            font-size: 0.8rem;
         }
     }
 
+    .about {
+        display: grid;
+        height: auto;
+        grid-template-columns: 1.5fr 1fr; 
+        grid-template-rows: auto 1fr; 
+        gap: 2rem;
+        margin: 0 2rem;
+
+        &__title {
+            grid-area: title; 
+            align-self: center;
+            margin-top: 2rem;
+        }
+
+        &__text {
+            grid-area: text; 
+            align-self: center;
+            margin-bottom: 2rem;
+            font-size: 0.8rem;
+        }
+
+        &__image {
+            grid-area: image; 
+            width: 100%; 
+            height: auto; 
+        }
+
+        grid-template-areas: 
+            "title image"
+            "text image";
+    }
+
 }
-    /* TO DO - Adjust layout for larger screens */
+
+/* TO DO - Adjust layout for larger screens */
