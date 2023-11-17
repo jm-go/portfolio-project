@@ -54,7 +54,7 @@
     }
 
     &__description {
-        //justify-self: flex-start;
+        text-align: justify;
         font-size: 1rem;
         margin-top: 2.8125rem;
         margin-left: 0.03125rem;
@@ -67,7 +67,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    text-align: left;
+    text-align: justify; //left I want to keep to original template
     margin: 0.625rem 0.625rem;
 
     &__title {
@@ -90,6 +90,7 @@
         margin-left: 0.5rem;
         margin-bottom: 0.5rem;
         width: 100%;
+        
     }
 }
 
@@ -200,6 +201,10 @@
         /* Slightly larger base font size on larger screens */
     }
 
+    p {
+        font-size: 0.9rem;
+    }
+
     .navbar {
         justify-content: space-between;
         margin-top: 2rem;
@@ -222,6 +227,21 @@
         }
     }
 
-}
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
 
-/* TO DO - Adjust layout for larger screens */
+        &__title {
+            text-align: center;
+            margin: 1rem auto;
+        }
+
+        &__description {
+            width: 55%;
+            margin-left: 1rem;
+        }
+    }
+
+}
+    /* TO DO - Adjust layout for larger screens */
