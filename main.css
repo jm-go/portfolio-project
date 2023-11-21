@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant&family=Inter&display=swap");
 /* Fonts */
-/* Color palette, set 1: pink-purple-blue */
+/* Color palette for the portfolio project */
 /* Navbar */
 .navbar {
   display: flex;
@@ -26,6 +26,10 @@
   margin-right: 1.5rem;
   text-decoration: none;
   color: inherit;
+}
+.navbar__link:hover {
+  text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
 }
 
 /* Header, About, Portfolio, Contact */
@@ -115,12 +119,18 @@
 }
 .skills__icon {
   margin: 0.3rem;
-  height: 3.1rem;
-  width: 3.1rem;
+  height: 3.2rem;
+  width: 3.2rem;
   font-size: 1rem;
 }
 
 /* Portfolio Section */
+.portfolio__project--tablet {
+  display: none;
+}
+.portfolio__project--laptop {
+  display: none;
+}
 .portfolio__project-figure {
   display: flex;
   flex-direction: column;
@@ -138,6 +148,10 @@
 .portfolio__project-buttons {
   display: flex;
   gap: 0.625rem;
+}
+.portfolio__project-button:hover {
+  transition: transform 0.3s ease;
+  transform: scale(1.05);
 }
 .portfolio__project-name {
   font-family: "Cormorant", sans-serif;
@@ -174,6 +188,9 @@
   color: #383838;
 }
 .contact__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 1.125rem;
   padding: 0.3125rem;
   border: 2px solid #383838;
@@ -182,6 +199,12 @@
   background-color: #FFFFFF;
   margin-bottom: 1.875rem;
   align-self: center;
+}
+.contact__button:hover {
+  transition: transform 0.3s ease;
+  background-color: #e6e6e6;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
 }
 
 /* Footer Section */
@@ -198,13 +221,17 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin: 0 0.45rem;
+  margin: 0 0.4rem;
 }
 .footer__icon-img {
   background-color: transparent;
 }
+.footer__icon:hover {
+  transition: transform 0.3s ease;
+  transform: scale(1.05);
+}
 
-/* Media Query for larger screens */
+/* Media Query for tablet screen */
 @media screen and (min-width: 768px) {
   html {
     font-size: 18px;
@@ -270,6 +297,16 @@
   .skills {
     display: flex;
   }
+  .portfolio {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .portfolio__project--tablet {
+    display: flex;
+  }
+  .portfolio__project-title {
+    width: 100%;
+  }
   .contact {
     display: flex;
     flex-direction: column;
@@ -281,7 +318,14 @@
   }
   .contact__button {
     width: 15rem;
+    height: 4rem;
     margin-bottom: 3.5rem;
+  }
+  .footer {
+    padding: 1rem;
+  }
+  .footer__icon {
+    margin: 0 0.7rem;
   }
 }
 /* TO DO - Adjust layout for larger screens */

@@ -30,6 +30,11 @@
         text-decoration: none;
         color: inherit;
     }
+
+    &__link:hover {
+        text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+        transform: scale(1.05); 
+    }
 }
 
 /* Header, About, Portfolio, Contact */
@@ -127,14 +132,22 @@
 
     &__icon {
         margin: 0.3rem;
-        height: 3.1rem;
-        width: 3.1rem;
+        height: 3.2rem;
+        width: 3.2rem;
         font-size: 1rem;
     }
 }
 
 /* Portfolio Section */
 .portfolio {
+
+    &__project--tablet {
+        display: none;
+    }
+
+    &__project--laptop {
+        display: none;
+    }
 
     &__project-figure {
         display: flex;
@@ -155,6 +168,11 @@
     &__project-buttons {
         display: flex;
         gap: 0.625rem;
+    }
+
+    &__project-button:hover {
+        transition: transform 0.3s ease;
+        transform: scale(1.05); 
     }
 
     &__project-name {
@@ -196,6 +214,9 @@
     }
 
     &__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         font-size: 1.125rem;
         padding: 0.3125rem;
         border: 2px solid $color-header;
@@ -204,6 +225,13 @@
         background-color: $color-white;
         margin-bottom: 1.875rem;
         align-self: center;
+    }
+
+    &__button:hover {
+        transition: transform 0.3s ease;
+        background-color: darken($color-white, 10%); 
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+        transform: scale(1.05); 
     }
 }
 
@@ -221,16 +249,21 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        margin: 0 0.45rem;
+        margin: 0 0.4rem;
     }
 
     &__icon-img {
         background-color: transparent;
     }
+
+    &__icon:hover {
+        transition: transform 0.3s ease;
+        transform: scale(1.05); 
+    }
 }
 
 
-/* Media Query for larger screens */
+/* Media Query for tablet screen */
 @media screen and (min-width: 768px) {
 
     html {
@@ -313,6 +346,41 @@
         display: flex;
     }
 
+    .portfolio {
+        display: flex;
+        flex-wrap: wrap;
+
+        // &__project {
+        //     display: flex;
+        //     flex-direction: row;
+        //     flex-wrap: wrap;
+        //     justify-content: space-between;
+        //     width: 100%;
+        // }
+    
+        &__project--tablet {
+            display: flex;
+        }
+
+        &__project-title {
+            width: 100%;
+        }
+
+        // &__project-figure {
+        //     width: calc(50% - 1.25rem)
+        // }
+
+        // &__project-details {
+        //     width: 80%;
+        // }
+
+        // &__project-img {
+        //     width: 800%;
+        //     height: auto;
+        //     object-fit: cover;
+        // }
+    }
+
     .contact {
         display: flex;
         flex-direction: column;
@@ -325,10 +393,18 @@
 
         &__button {
             width: 15rem;
+            height: 4rem;
             margin-bottom: 3.5rem;
         }
     }
 
+    .footer {
+        padding: 1rem;
+
+        &__icon {
+            margin: 0 0.7rem;
+        }
+    }
 }
 
 /* TO DO - Adjust layout for larger screens */
