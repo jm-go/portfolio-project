@@ -2,6 +2,7 @@
 
 /* About Section */
 .about {
+    padding: 1rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -12,7 +13,7 @@
         font-family: $font-headers;
         font-weight: 700;
         font-size: 2rem;
-        text-align: left;
+        //text-align: left;
         margin-left: 0.03125rem;
         color: $color-header;
     }

@@ -2,7 +2,7 @@
 
 /* Header Section */
 .header {
-    text-align: left;
+    //text-align: left;
     padding: 1rem;
     margin: 0.625rem 0.625rem;
 
@@ -13,6 +13,7 @@
         font-size: 4.2rem;
         margin: 0 0.03125rem;
         color: $color-header;
+        text-align: left;
     }
 
     &__description {

@@ -58,7 +58,6 @@
 }
 /* Header Section */
 .header {
-  text-align: left;
   padding: 1rem;
   margin: 0.625rem 0.625rem;
 }
@@ -69,6 +68,7 @@
   font-size: 4.2rem;
   margin: 0 0.03125rem;
   color: #383838;
+  text-align: left;
 }
 .header__description {
   text-align: justify;
@@ -103,6 +103,7 @@
 }
 /* About Section */
 .about {
+  padding: 1rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -113,7 +114,6 @@
   font-family: "Cormorant", sans-serif;
   font-weight: 700;
   font-size: 2rem;
-  text-align: left;
   margin-left: 0.03125rem;
   color: #383838;
 }
@@ -211,6 +211,9 @@
   }
 }
 /* Portfolio Section */
+.portfolio {
+  padding: 1rem;
+}
 .portfolio__figure {
   display: flex;
   flex-direction: column;
@@ -283,6 +286,9 @@
   p {
     font-size: 0.8rem;
   }
+  .portfolio {
+    padding: 1rem;
+  }
   .portfolio__project {
     display: flex;
     flex-wrap: wrap;
@@ -298,8 +304,37 @@
     display: flex;
   }
 }
+/* Media Query for laptop screen */
+@media screen and (min-width: 1024px) {
+  html {
+    font-size: 18px;
+  }
+  p {
+    font-size: 0.8rem;
+  }
+  .portfolio {
+    padding: 1rem;
+  }
+  .portfolio__project {
+    margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+  }
+  .portfolio__figure--tablet {
+    display: flex;
+  }
+  .portfolio__title {
+    margin-left: 2rem;
+  }
+  .portfolio__labels {
+    display: flex;
+  }
+}
 /* Contact Section */
 .contact {
+  padding: 1rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -308,6 +343,7 @@
 }
 .contact__heading {
   font-family: "Cormorant", sans-serif;
+  text-align: center;
   margin-bottom: 5rem;
   font-weight: 400;
   font-size: 4.5rem;
@@ -406,15 +442,6 @@
   font-family: "Inter", sans-serif;
   color: #000000;
   text-decoration: none;
-}
-
-/* Header, About, Portfolio, Contact */
-.header,
-.about,
-.portfolio,
-.contact {
-  padding: 1rem;
-  text-align: center;
 }
 
 /* this base font size allows to control the scaling across the whole project */
