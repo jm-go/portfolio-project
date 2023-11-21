@@ -51,7 +51,7 @@
   font-family: "Cormorant", sans-serif;
   margin-bottom: 5rem;
   font-weight: 400;
-  font-size: 4.1rem;
+  font-size: 4.2rem;
   margin: 0 0.03125rem;
   color: #383838;
 }
@@ -121,39 +121,40 @@
   margin: 0.3rem;
   height: 3.2rem;
   width: 3.2rem;
-  font-size: 1rem;
 }
 
 /* Portfolio Section */
-.portfolio__project--tablet {
-  display: none;
-}
-.portfolio__project--laptop {
-  display: none;
-}
-.portfolio__project-figure {
+.portfolio__figure {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0.625rem 0.625rem;
 }
-.portfolio__project-details {
+.portfolio__figure--tablet {
+  display: none;
+}
+.portfolio__figure--laptop {
+  display: none;
+}
+.portfolio__details {
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   width: 100%;
   margin-top: 0.625rem;
   margin-bottom: 0.9375rem;
 }
-.portfolio__project-buttons {
+.portfolio__buttons {
   display: flex;
   gap: 0.625rem;
 }
-.portfolio__project-button:hover {
+.portfolio__button:hover {
   transition: transform 0.3s ease;
   transform: scale(1.05);
 }
-.portfolio__project-name {
+.portfolio__name {
   font-family: "Cormorant", sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
@@ -167,8 +168,23 @@
   margin-bottom: 1rem;
   color: #383838;
 }
-.portfolio__project-img {
+.portfolio__img {
   max-width: 100%;
+}
+.portfolio__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.portfolio__labels {
+  display: none;
+  font-family: "Inter", sans-serif;
+  font-size: 0.5rem;
+  font-weight: 600;
+  padding-left: 0.8rem;
+  padding-top: 0.8rem;
+  gap: 2rem;
 }
 
 /* Contact Section */
@@ -297,15 +313,19 @@
   .skills {
     display: flex;
   }
-  .portfolio {
+  .portfolio__project {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
-  .portfolio__project--tablet {
+  .portfolio__figure--tablet {
     display: flex;
   }
-  .portfolio__project-title {
-    width: 100%;
+  .portfolio__title {
+    margin-left: 2rem;
+  }
+  .portfolio__labels {
+    display: flex;
   }
   .contact {
     display: flex;

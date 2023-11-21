@@ -32,8 +32,8 @@
     }
 
     &__link:hover {
-        text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
-        transform: scale(1.05); 
+        text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        transform: scale(1.05);
     }
 }
 
@@ -56,7 +56,7 @@
         font-family: $font-headers;
         margin-bottom: 5rem;
         font-weight: 400;
-        font-size: 4.1rem;
+        font-size: 4.2rem;
         margin: 0 0.03125rem;
         color: $color-header;
     }
@@ -134,48 +134,49 @@
         margin: 0.3rem;
         height: 3.2rem;
         width: 3.2rem;
-        font-size: 1rem;
     }
 }
 
 /* Portfolio Section */
 .portfolio {
 
-    &__project--tablet {
-        display: none;
-    }
-
-    &__project--laptop {
-        display: none;
-    }
-
-    &__project-figure {
+    &__figure {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin: 0.625rem 0.625rem;
+
+        &--tablet {
+            display: none;
+        }
+
+        &--laptop {
+            display: none;
+        }
     }
 
-    &__project-details {
+    &__details {
         display: flex;
         justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
         align-items: center;
         width: 100%;
         margin-top: 0.625rem;
         margin-bottom: 0.9375rem;
     }
 
-    &__project-buttons {
+    &__buttons {
         display: flex;
         gap: 0.625rem;
     }
 
-    &__project-button:hover {
+    &__button:hover {
         transition: transform 0.3s ease;
-        transform: scale(1.05); 
+        transform: scale(1.05);
     }
 
-    &__project-name {
+    &__name {
         font-family: $font-headers;
         font-weight: 400;
         font-size: 1.6rem;
@@ -191,8 +192,25 @@
         color: $color-header;
     }
 
-    &__project-img {
+    &__img {
         max-width: 100%;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    &__labels {
+        display: none;
+        font-family: $font-body;
+        font-size: 0.5rem;
+        font-weight: 600;
+        padding-left: 0.8rem;
+        padding-top: 0.8rem;
+        gap: 2rem;
     }
 }
 
@@ -229,9 +247,9 @@
 
     &__button:hover {
         transition: transform 0.3s ease;
-        background-color: darken($color-white, 10%); 
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
-        transform: scale(1.05); 
+        background-color: darken($color-white, 10%);
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        transform: scale(1.05);
     }
 }
 
@@ -258,7 +276,7 @@
 
     &__icon:hover {
         transition: transform 0.3s ease;
-        transform: scale(1.05); 
+        transform: scale(1.05);
     }
 }
 
@@ -347,38 +365,27 @@
     }
 
     .portfolio {
-        display: flex;
-        flex-wrap: wrap;
 
-        // &__project {
-        //     display: flex;
-        //     flex-direction: row;
-        //     flex-wrap: wrap;
-        //     justify-content: space-between;
-        //     width: 100%;
-        // }
-    
-        &__project--tablet {
+        &__project {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        &__figure {
+
+            &--tablet {
+                display: flex;
+            }
+        }
+
+        &__title {
+            margin-left: 2rem;
+        }
+
+        &__labels {
             display: flex;
         }
-
-        &__project-title {
-            width: 100%;
-        }
-
-        // &__project-figure {
-        //     width: calc(50% - 1.25rem)
-        // }
-
-        // &__project-details {
-        //     width: 80%;
-        // }
-
-        // &__project-img {
-        //     width: 800%;
-        //     height: auto;
-        //     object-fit: cover;
-        // }
     }
 
     .contact {
