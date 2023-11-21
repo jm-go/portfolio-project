@@ -17,6 +17,7 @@
   margin-bottom: 0.15625rem;
 }
 .navbar__links {
+  list-style: none;
   display: none;
   font-family: "Inter", sans-serif;
   font-size: 0.9rem;
@@ -32,15 +33,29 @@
   transform: scale(1.05);
 }
 
-/* Header, About, Portfolio, Contact */
-.header,
-.about,
-.portfolio,
-.contact {
-  padding: 1rem;
-  text-align: center;
+/* Media Query for tablet screen */
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 18px;
+  }
+  p {
+    font-size: 0.8rem;
+  }
+  .navbar {
+    justify-content: space-between;
+    margin: 2rem 2rem;
+  }
+  .navbar__name {
+    margin: rem;
+  }
+  .navbar__links {
+    display: flex;
+    align-items: center;
+  }
+  .navbar__links--link {
+    display: inline-block;
+  }
 }
-
 /* Header Section */
 .header {
   text-align: left;
@@ -62,6 +77,30 @@
   margin-left: 0.03125rem;
 }
 
+/* Media Query for tablet screen */
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 18px;
+    /* Slightly larger base font size on larger screens */
+  }
+  p {
+    font-size: 0.8rem;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 2rem;
+  }
+  .header__title {
+    text-align: center;
+    margin: 1rem auto;
+  }
+  .header__description {
+    width: 56%;
+    font-size: 0.8rem;
+  }
+}
 /* About Section */
 .about {
   display: flex;
@@ -90,6 +129,41 @@
   width: auto;
 }
 
+/* Media Query for tablet screen */
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 18px;
+    /* Slightly larger base font size on larger screens */
+  }
+  p {
+    font-size: 0.8rem;
+  }
+  .about {
+    display: grid;
+    height: auto;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 2rem;
+    margin: 0 2rem;
+    grid-template-areas: "title image" "text image";
+  }
+  .about__title {
+    grid-area: title;
+    align-self: center;
+    margin-top: 2rem;
+  }
+  .about__text {
+    grid-area: text;
+    align-self: center;
+    margin-bottom: 2rem;
+    font-size: 0.8rem;
+  }
+  .about__image {
+    grid-area: image;
+    width: 100%;
+    height: auto;
+  }
+}
 /* Skills Section - hidden in mobile view */
 .skills {
   display: none;
@@ -123,6 +197,19 @@
   width: 3.2rem;
 }
 
+/* Media Query for tablet screen */
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 18px;
+    /* Slightly larger base font size on larger screens */
+  }
+  p {
+    font-size: 0.8rem;
+  }
+  .skills {
+    display: flex;
+  }
+}
 /* Portfolio Section */
 .portfolio__figure {
   display: flex;
@@ -180,13 +267,37 @@
 .portfolio__labels {
   display: none;
   font-family: "Inter", sans-serif;
-  font-size: 0.5rem;
+  font-size: 0.55rem;
   font-weight: 600;
   padding-left: 0.8rem;
   padding-top: 0.8rem;
   gap: 2rem;
 }
 
+/* Media Query for tablet screen */
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 18px;
+    /* Slightly larger base font size on larger screens */
+  }
+  p {
+    font-size: 0.8rem;
+  }
+  .portfolio__project {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .portfolio__figure--tablet {
+    display: flex;
+  }
+  .portfolio__title {
+    margin-left: 2rem;
+  }
+  .portfolio__labels {
+    display: flex;
+  }
+}
 /* Contact Section */
 .contact {
   display: flex;
@@ -223,6 +334,30 @@
   transform: scale(1.05);
 }
 
+/* Media Query for tablet screen */
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 18px;
+    /* Slightly larger base font size on larger screens */
+  }
+  p {
+    font-size: 0.8rem;
+  }
+  .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .contact__heading {
+    margin-bottom: 2.5rem;
+  }
+  .contact__button {
+    width: 15rem;
+    height: 4rem;
+    margin-bottom: 3.5rem;
+  }
+}
 /* Footer Section */
 .footer {
   display: flex;
@@ -256,91 +391,6 @@
   p {
     font-size: 0.8rem;
   }
-  .navbar {
-    justify-content: space-between;
-    margin: 2rem 2rem;
-    /* Align items on opposite ends */
-  }
-  .navbar__name {
-    margin: rem;
-  }
-  .navbar__links {
-    display: flex;
-    align-items: center;
-  }
-  .navbar__links--link {
-    display: inline-block;
-  }
-  .header {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 0 2rem;
-  }
-  .header__title {
-    text-align: center;
-    margin: 1rem auto;
-  }
-  .header__description {
-    width: 56%;
-    font-size: 0.8rem;
-  }
-  .about {
-    display: grid;
-    height: auto;
-    grid-template-columns: 1.5fr 1fr;
-    grid-template-rows: auto 1fr;
-    gap: 2rem;
-    margin: 0 2rem;
-    grid-template-areas: "title image" "text image";
-  }
-  .about__title {
-    grid-area: title;
-    align-self: center;
-    margin-top: 2rem;
-  }
-  .about__text {
-    grid-area: text;
-    align-self: center;
-    margin-bottom: 2rem;
-    font-size: 0.8rem;
-  }
-  .about__image {
-    grid-area: image;
-    width: 100%;
-    height: auto;
-  }
-  .skills {
-    display: flex;
-  }
-  .portfolio__project {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .portfolio__figure--tablet {
-    display: flex;
-  }
-  .portfolio__title {
-    margin-left: 2rem;
-  }
-  .portfolio__labels {
-    display: flex;
-  }
-  .contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .contact__heading {
-    margin-bottom: 2.5rem;
-  }
-  .contact__button {
-    width: 15rem;
-    height: 4rem;
-    margin-bottom: 3.5rem;
-  }
   .footer {
     padding: 1rem;
   }
@@ -348,7 +398,6 @@
     margin: 0 0.7rem;
   }
 }
-/* TO DO - Adjust layout for larger screens */
 * {
   margin: 0;
   padding: 0;
@@ -357,6 +406,15 @@
   font-family: "Inter", sans-serif;
   color: #000000;
   text-decoration: none;
+}
+
+/* Header, About, Portfolio, Contact */
+.header,
+.about,
+.portfolio,
+.contact {
+  padding: 1rem;
+  text-align: center;
 }
 
 /* this base font size allows to control the scaling across the whole project */

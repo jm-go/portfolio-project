@@ -1,6 +1,13 @@
 @use "./variables" as *;
-@use "./components";
 @use "./layout";
+
+@use "./navbar";
+@use "./header";
+@use "./about";
+@use "./skills";
+@use "./portfolio";
+@use "./contact";
+@use "./footer";
 
 * {
     margin: 0;
@@ -10,6 +17,15 @@
     font-family: $font-body;
     color: $color-black;
     text-decoration: none;
+}
+
+/* Header, About, Portfolio, Contact */
+.header,
+.about,
+.portfolio,
+.contact {
+    padding: 1rem;
+    text-align: center;
 }
 
 /* this base font size allows to control the scaling across the whole project */

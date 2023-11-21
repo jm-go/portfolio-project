@@ -1,0 +1,76 @@
+@use "./variables" as *;
+
+/* About Section */
+.about {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: justify; //left I want to keep to original template
+    margin: 0.625rem 0.625rem;
+
+    &__title {
+        font-family: $font-headers;
+        font-weight: 700;
+        font-size: 2rem;
+        text-align: left;
+        margin-left: 0.03125rem;
+        color: $color-header;
+    }
+
+    &__image {
+        max-width: 100%;
+        margin-top: 1.875rem;
+        margin-bottom: 1.875rem;
+        justify-self: center;
+    }
+
+    &__text {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+        width: auto;
+    }
+}
+
+/* Media Query for tablet screen */
+@media screen and (min-width: 768px) {
+
+    html {
+        font-size: 18px;
+        /* Slightly larger base font size on larger screens */
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    .about {
+        display: grid;
+        height: auto;
+        grid-template-columns: 1.5fr 1fr;
+        grid-template-rows: auto 1fr;
+        gap: 2rem;
+        margin: 0 2rem;
+
+        &__title {
+            grid-area: title;
+            align-self: center;
+            margin-top: 2rem;
+        }
+
+        &__text {
+            grid-area: text;
+            align-self: center;
+            margin-bottom: 2rem;
+            font-size: 0.8rem;
+        }
+
+        &__image {
+            grid-area: image;
+            width: 100%;
+            height: auto;
+        }
+
+        grid-template-areas: "title image"
+        "text image";
+    }
+}

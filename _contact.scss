@@ -1,0 +1,70 @@
+@use "./variables" as *;
+
+/* Contact Section */
+.contact {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+
+    &__heading {
+        font-family: $font-headers;
+        margin-bottom: 5rem;
+        font-weight: 400;
+        font-size: 4.5rem;
+        margin: 1.875rem 0.03125rem;
+        color: $color-header;
+    }
+
+    &__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.125rem;
+        padding: 0.3125rem;
+        border: 2px solid $color-header;
+        width: 16rem;
+        height: 4.5rem;
+        background-color: $color-white;
+        margin-bottom: 1.875rem;
+        align-self: center;
+    }
+
+    &__button:hover {
+        transition: transform 0.3s ease;
+        background-color: darken($color-white, 10%);
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        transform: scale(1.05);
+    }
+}
+
+/* Media Query for tablet screen */
+@media screen and (min-width: 768px) {
+
+    html {
+        font-size: 18px;
+        /* Slightly larger base font size on larger screens */
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &__heading {
+            margin-bottom: 2.5rem;
+        }
+
+        &__button {
+            width: 15rem;
+            height: 4rem;
+            margin-bottom: 3.5rem;
+        }
+    }
+}

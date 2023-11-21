@@ -1,0 +1,115 @@
+@use "./variables" as *;
+
+/* Portfolio Section */
+.portfolio {
+
+    &__figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0.625rem 0.625rem;
+
+        &--tablet {
+            display: none;
+        }
+
+        &--laptop {
+            display: none;
+        }
+    }
+
+    &__details {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%;
+        margin-top: 0.625rem;
+        margin-bottom: 0.9375rem;
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 0.625rem;
+    }
+
+    &__button:hover {
+        transition: transform 0.3s ease;
+        transform: scale(1.05);
+    }
+
+    &__name {
+        font-family: $font-headers;
+        font-weight: 400;
+        font-size: 1.6rem;
+    }
+
+    &__title {
+        font-family: $font-headers;
+        font-weight: 700;
+        font-size: 2rem;
+        text-align: left;
+        margin-left: 0.5rem;
+        margin-bottom: 1rem;
+        color: $color-header;
+    }
+
+    &__img {
+        max-width: 100%;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    &__labels {
+        display: none;
+        font-family: $font-body;
+        font-size: 0.55rem;
+        font-weight: 600;
+        padding-left: 0.8rem;
+        padding-top: 0.8rem;
+        gap: 2rem;
+    }
+}
+
+/* Media Query for tablet screen */
+@media screen and (min-width: 768px) {
+
+    html {
+        font-size: 18px;
+        /* Slightly larger base font size on larger screens */
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    .portfolio {
+
+        &__project {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        &__figure {
+
+            &--tablet {
+                display: flex;
+            }
+        }
+
+        &__title {
+            margin-left: 2rem;
+        }
+
+        &__labels {
+            display: flex;
+        }
+    }
+}
