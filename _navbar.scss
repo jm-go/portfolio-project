@@ -39,20 +39,34 @@
 /* Media Query for tablet screen */
 @media screen and (min-width: 768px) {
 
-    html {
-        font-size: 18px;
-    }
-
-    p {
-        font-size: 0.8rem;
-    }
-
     .navbar {
         justify-content: space-between;
         margin: 2rem 2rem;
 
         &__name {
             margin: rem;
+        }
+
+        &__links {
+            display: flex;
+            align-items: center;
+
+            &--link {
+                display: inline-block;
+            }
+        }
+    }
+}
+
+/* Media Query for desktop screen */
+@media screen and (min-width: 1440px) {
+
+    .navbar {
+        justify-content: space-between;
+        margin: 3rem 4rem;
+
+        &__name {
+            font-size: 1.7rem;
         }
 
         &__links {

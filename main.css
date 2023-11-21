@@ -35,18 +35,29 @@
 
 /* Media Query for tablet screen */
 @media screen and (min-width: 768px) {
-  html {
-    font-size: 18px;
-  }
-  p {
-    font-size: 0.8rem;
-  }
   .navbar {
     justify-content: space-between;
     margin: 2rem 2rem;
   }
   .navbar__name {
     margin: rem;
+  }
+  .navbar__links {
+    display: flex;
+    align-items: center;
+  }
+  .navbar__links--link {
+    display: inline-block;
+  }
+}
+/* Media Query for desktop screen */
+@media screen and (min-width: 1440px) {
+  .navbar {
+    justify-content: space-between;
+    margin: 3rem 4rem;
+  }
+  .navbar__name {
+    font-size: 1.7rem;
   }
   .navbar__links {
     display: flex;
@@ -79,10 +90,6 @@
 
 /* Media Query for tablet screen */
 @media screen and (min-width: 768px) {
-  html {
-    font-size: 18px;
-    /* Slightly larger base font size on larger screens */
-  }
   p {
     font-size: 0.8rem;
   }
@@ -99,6 +106,26 @@
   .header__description {
     width: 56%;
     font-size: 0.8rem;
+  }
+}
+/* Media Query for desktop screen */
+@media screen and (min-width: 1440px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 4rem;
+  }
+  .header__title {
+    text-align: center;
+    margin: 1rem auto;
+    font-size: 4.9rem;
+  }
+  .header__description {
+    text-align: left;
+    width: 45%;
+    font-size: 0.8rem;
+    margin-left: 3.5rem;
   }
 }
 /* About Section */
@@ -131,13 +158,6 @@
 
 /* Media Query for tablet screen */
 @media screen and (min-width: 768px) {
-  html {
-    font-size: 18px;
-    /* Slightly larger base font size on larger screens */
-  }
-  p {
-    font-size: 0.8rem;
-  }
   .about {
     display: grid;
     height: auto;
@@ -162,6 +182,35 @@
     grid-area: image;
     width: 100%;
     height: auto;
+  }
+}
+/* Media Query for desktop screen */
+@media screen and (min-width: 1440px) {
+  .about {
+    display: grid;
+    height: auto;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 3rem;
+    margin: 0 4rem;
+    grid-template-areas: "title image" "text image";
+  }
+  .about__title {
+    grid-area: title;
+    align-self: center;
+    margin-top: 5rem;
+  }
+  .about__text {
+    grid-area: text;
+    align-self: center;
+    margin-bottom: 3.5rem;
+    font-size: 0.8rem;
+  }
+  .about__image {
+    grid-area: image;
+    width: 83%;
+    height: auto;
+    justify-self: end;
   }
 }
 /* Skills Section - hidden in mobile view */
@@ -199,15 +248,17 @@
 
 /* Media Query for tablet screen */
 @media screen and (min-width: 768px) {
-  html {
-    font-size: 18px;
-    /* Slightly larger base font size on larger screens */
-  }
-  p {
-    font-size: 0.8rem;
-  }
   .skills {
     display: flex;
+    font-size: 0.8rem;
+  }
+}
+/* Media Query for desktop screen */
+@media screen and (min-width: 1440px) {
+  .skills {
+    margin: 0 4rem;
+    display: flex;
+    font-size: 0.8rem;
   }
 }
 /* Portfolio Section */
@@ -279,13 +330,6 @@
 
 /* Media Query for tablet screen */
 @media screen and (min-width: 768px) {
-  html {
-    font-size: 18px;
-    /* Slightly larger base font size on larger screens */
-  }
-  p {
-    font-size: 0.8rem;
-  }
   .portfolio {
     padding: 1rem;
   }
@@ -306,12 +350,6 @@
 }
 /* Media Query for laptop screen */
 @media screen and (min-width: 1024px) {
-  html {
-    font-size: 18px;
-  }
-  p {
-    font-size: 0.8rem;
-  }
   .portfolio {
     padding: 1rem;
   }
@@ -320,13 +358,51 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 3rem;
+    gap: 2.5rem;
+  }
+  .portfolio__figure {
+    width: 100%;
+    max-width: 17.5rem;
   }
   .portfolio__figure--tablet {
     display: flex;
   }
   .portfolio__title {
     margin-left: 2rem;
+  }
+  .portfolio__labels {
+    display: flex;
+  }
+}
+/* Media Query for desktop screen */
+@media screen and (min-width: 1440px) {
+  .portfolio {
+    padding: 1rem;
+  }
+  .portfolio__project {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .portfolio__figure {
+    width: 100%;
+    max-width: 17.95rem;
+    margin: 0;
+  }
+  .portfolio__figure--tablet {
+    display: flex;
+  }
+  .portfolio__figure--laptop {
+    display: flex;
+  }
+  .portfolio__image {
+    width: 100%;
+    height: auto;
+  }
+  .portfolio__title {
+    margin-left: 4rem;
   }
   .portfolio__labels {
     display: flex;
@@ -372,10 +448,6 @@
 
 /* Media Query for tablet screen */
 @media screen and (min-width: 768px) {
-  html {
-    font-size: 18px;
-    /* Slightly larger base font size on larger screens */
-  }
   p {
     font-size: 0.8rem;
   }
@@ -420,10 +492,6 @@
 
 /* Media Query for tablet screen */
 @media screen and (min-width: 768px) {
-  html {
-    font-size: 18px;
-    /* Slightly larger base font size on larger screens */
-  }
   p {
     font-size: 0.8rem;
   }
@@ -437,7 +505,7 @@
 * {
   margin: 0;
   padding: 0;
-  background-color: #92A1B5;
+  background-color: #FFFFFF;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
   color: #000000;
@@ -447,4 +515,15 @@
 /* this base font size allows to control the scaling across the whole project */
 html {
   font-size: 16px;
+}
+
+@media screen and (min-width: 1024px) {
+  html {
+    font-size: 19px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  html {
+    font-size: 21px;
+  }
 }/*# sourceMappingURL=main.css.map */

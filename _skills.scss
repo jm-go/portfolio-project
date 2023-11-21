@@ -40,16 +40,18 @@
 /* Media Query for tablet screen */
 @media screen and (min-width: 768px) {
 
-    html {
-        font-size: 18px;
-        /* Slightly larger base font size on larger screens */
-    }
-
-    p {
-        font-size: 0.8rem;
-    }
-
     .skills {
         display: flex;
+        font-size: 0.8rem;;
+    }
+}
+
+/* Media Query for desktop screen */
+@media screen and (min-width: 1440px) {
+
+    .skills {
+        margin: 0 4rem;
+        display: flex;
+        font-size: 0.8rem;;
     }
 }

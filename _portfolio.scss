@@ -81,15 +81,6 @@
 /* Media Query for tablet screen */
 @media screen and (min-width: 768px) {
 
-    html {
-        font-size: 18px;
-        /* Slightly larger base font size on larger screens */
-    }
-
-    p {
-        font-size: 0.8rem;
-    }
-
     .portfolio {
         padding: 1rem;
 
@@ -119,14 +110,6 @@
 /* Media Query for laptop screen */
 @media screen and (min-width: 1024px) {
 
-    html {
-        font-size: 18px;
-    }
-
-    p {
-        font-size: 0.8rem;
-    }
-
     .portfolio {
         padding: 1rem;
 
@@ -135,10 +118,12 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 3rem;
+            gap: 2.5rem;
         }
 
         &__figure {
+            width: 100%;
+            max-width: 17.5rem;
 
             &--tablet {
                 display: flex;
@@ -147,6 +132,49 @@
 
         &__title {
             margin-left: 2rem;
+        }
+
+        &__labels {
+            display: flex;
+        }
+    }
+}
+
+/* Media Query for desktop screen */
+@media screen and (min-width: 1440px) {
+
+    .portfolio {
+        padding: 1rem;
+
+        &__project {
+            margin-top: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        &__figure {
+            width: 100%;
+            max-width: 17.95rem;
+            margin: 0;
+
+            &--tablet {
+                display: flex;
+            }
+
+            &--laptop {
+                display: flex;
+            }
+        }
+
+        &__image {
+            width: 100%;
+            height: auto; 
+        }
+
+        &__title {
+            margin-left: 4rem;
         }
 
         &__labels {

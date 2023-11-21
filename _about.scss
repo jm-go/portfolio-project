@@ -35,15 +35,6 @@
 /* Media Query for tablet screen */
 @media screen and (min-width: 768px) {
 
-    html {
-        font-size: 18px;
-        /* Slightly larger base font size on larger screens */
-    }
-
-    p {
-        font-size: 0.8rem;
-    }
-
     .about {
         display: grid;
         height: auto;
@@ -69,6 +60,42 @@
             grid-area: image;
             width: 100%;
             height: auto;
+        }
+
+        grid-template-areas: "title image"
+        "text image";
+    }
+}
+
+/* Media Query for desktop screen */
+@media screen and (min-width: 1440px) {
+
+    .about {
+        display: grid;
+        height: auto;
+        grid-template-columns: 1.5fr 1fr;
+        grid-template-rows: auto 1fr;
+        gap: 3rem;
+        margin: 0 4rem;
+
+        &__title {
+            grid-area: title;
+            align-self: center;
+            margin-top: 5rem;
+        }
+
+        &__text {
+            grid-area: text;
+            align-self: center;
+            margin-bottom: 3.5rem;
+            font-size: 0.8rem;
+        }
+
+        &__image {
+            grid-area: image;
+            width: 83%;
+            height: auto;
+            justify-self: end;
         }
 
         grid-template-areas: "title image"
