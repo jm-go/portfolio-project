@@ -456,9 +456,10 @@
 }
 .contact__button:hover {
   transition: transform 0.3s ease;
-  background-color: #e6e6e6;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   transform: scale(1.05);
+  color: #AA336A;
+  border-color: #AA336A;
 }
 
 /* Media Query for tablet screen */
