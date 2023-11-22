@@ -14,7 +14,7 @@
   font-family: "Cormorant", sans-serif;
   font-weight: 700;
   font-size: 1.5rem;
-  margin-bottom: 0.15625rem;
+  margin-bottom: 0.15rem;
 }
 .navbar__links {
   list-style: none;
@@ -26,11 +26,11 @@
   margin-left: 1.5rem;
   margin-right: 1.5rem;
   text-decoration: none;
-  color: inherit;
 }
 .navbar__link:hover {
   text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  transform: scale(1.05);
+  transform: scale(1.1);
+  color: #AA336A;
 }
 
 /* Media Query for tablet screen */
@@ -77,15 +77,18 @@
   margin-bottom: 5rem;
   font-weight: 400;
   font-size: 4.2rem;
-  margin: 0 0.03125rem;
+  margin: 0 0.03rem;
   color: #383838;
   text-align: left;
+}
+.header__title--pink {
+  color: #AA336A;
 }
 .header__description {
   text-align: justify;
   font-size: 0.9rem;
-  margin-top: 2.8125rem;
-  margin-left: 0.03125rem;
+  margin-top: 2.8rem;
+  margin-left: 0.03rem;
 }
 
 /* Media Query for tablet screen */
@@ -141,7 +144,7 @@
   font-family: "Cormorant", sans-serif;
   font-weight: 700;
   font-size: 2rem;
-  margin-left: 0.03125rem;
+  margin-left: 0.03rem;
   color: #383838;
 }
 .about__image {
@@ -149,6 +152,7 @@
   margin-top: 1.875rem;
   margin-bottom: 1.875rem;
   justify-self: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
 }
 .about__text {
   font-size: 0.9rem;
@@ -237,7 +241,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 1rem;
+  margin-top: 3rem;
   margin-bottom: 2rem;
 }
 .skills__icon {
@@ -259,6 +263,14 @@
     margin: 0 4rem;
     display: flex;
     font-size: 0.8rem;
+  }
+  .skills__icon {
+    margin: 0.3rem;
+    height: 4.5rem;
+    width: 4.5rem;
+  }
+  .skills__text {
+    gap: 7rem;
   }
 }
 /* Portfolio Section */
@@ -423,15 +435,18 @@
   margin-bottom: 5rem;
   font-weight: 400;
   font-size: 4.5rem;
-  margin: 1.875rem 0.03125rem;
+  margin: 1.875rem 0.03rem;
   color: #383838;
+}
+.contact__heading--pink {
+  color: #AA336A;
 }
 .contact__button {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.125rem;
-  padding: 0.3125rem;
+  padding: 0.313rem;
   border: 2px solid #383838;
   width: 16rem;
   height: 4.5rem;

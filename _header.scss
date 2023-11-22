@@ -11,16 +11,20 @@
         margin-bottom: 5rem;
         font-weight: 400;
         font-size: 4.2rem;
-        margin: 0 0.03125rem;
+        margin: 0 0.03rem;
         color: $color-header;
         text-align: left;
+
+        &--pink {
+            color: $color-pink;
+        }
     }
 
     &__description {
         text-align: justify;
         font-size: 0.9rem;
-        margin-top: 2.8125rem;
-        margin-left: 0.03125rem;
+        margin-top: 2.8rem;
+        margin-left: 0.03rem;
     }
 }
 

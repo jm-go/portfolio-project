@@ -13,8 +13,7 @@
         font-family: $font-headers;
         font-weight: 700;
         font-size: 2rem;
-        //text-align: left;
-        margin-left: 0.03125rem;
+        margin-left: 0.03rem;
         color: $color-header;
     }
 
@@ -23,6 +22,7 @@
         margin-top: 1.875rem;
         margin-bottom: 1.875rem;
         justify-self: center;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
     }
 
     &__text {
