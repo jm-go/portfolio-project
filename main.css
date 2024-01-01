@@ -464,9 +464,6 @@
 
 /* Media Query for tablet screen */
 @media screen and (min-width: 768px) {
-  p {
-    font-size: 0.8rem;
-  }
   .contact {
     display: flex;
     flex-direction: column;
@@ -508,9 +505,6 @@
 
 /* Media Query for tablet screen */
 @media screen and (min-width: 768px) {
-  p {
-    font-size: 0.8rem;
-  }
   .footer {
     padding: 1rem;
   }
@@ -531,6 +525,7 @@
 /* this base font size allows to control the scaling across the whole project */
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 @media screen and (min-width: 1024px) {
