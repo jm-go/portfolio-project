@@ -26,8 +26,8 @@
         flex-wrap: wrap;
         align-items: center;
         width: 100%;
-        margin-top: 0.625rem;
-        margin-bottom: 0.9375rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 
     &__buttons {
@@ -43,7 +43,7 @@
     &__name {
         font-family: $font-headers;
         font-weight: 400;
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
 
     &__title {
@@ -58,6 +58,9 @@
 
     &__img {
         max-width: 100%;
+        object-fit: contain;
+        height: auto;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     }
 
     &__header {
@@ -88,6 +91,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            gap: 1rem;
         }
 
         &__figure {
@@ -103,6 +107,18 @@
 
         &__labels {
             display: flex;
+
+        }
+
+        &__img {
+            width: 100%;
+            max-width: 23rem;
+            height: auto;
+        }
+
+        &__name {
+            display: flex;
+            flex-wrap: wrap;
         }
     }
 }
