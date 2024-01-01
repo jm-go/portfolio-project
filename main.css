@@ -388,7 +388,7 @@
   }
   .portfolio__figure {
     width: 100%;
-    max-width: 17.5rem;
+    max-width: 21rem;
   }
   .portfolio__figure--tablet {
     display: flex;
@@ -398,6 +398,9 @@
   }
   .portfolio__labels {
     display: flex;
+  }
+  .portfolio__img {
+    height: auto;
   }
 }
 /* Media Query for desktop screen */

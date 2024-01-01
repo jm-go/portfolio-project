@@ -139,7 +139,7 @@
 
         &__figure {
             width: 100%;
-            max-width: 17.5rem;
+            max-width: 21rem;
 
             &--tablet {
                 display: flex;
@@ -152,6 +152,12 @@
 
         &__labels {
             display: flex;
+        }
+
+        &__img {
+            //width: 100%;
+            //max-width: 50rem;
+            height: auto;
         }
     }
 }
