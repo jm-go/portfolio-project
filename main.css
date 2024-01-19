@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant&family=Inter&display=swap");
 /* Fonts */
 /* Color palette for the portfolio project */
+/* Breakpoints for media queries */
 /* Navbar */
 .navbar {
   display: flex;
@@ -344,6 +345,17 @@
   gap: 2rem;
 }
 
+@media screen and (min-width: 425px) {
+  .portfolio__project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .portfolio__figure {
+    max-width: 20rem;
+    height: auto;
+  }
+}
 /* Media Query for tablet screen */
 @media screen and (min-width: 768px) {
   .portfolio {
@@ -351,15 +363,16 @@
   }
   .portfolio__project {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
+    gap: 0.5rem;
   }
   .portfolio__figure--tablet {
     display: flex;
   }
   .portfolio__title {
-    margin-left: 2rem;
+    margin-left: 1.5rem;
   }
   .portfolio__labels {
     display: flex;
@@ -380,17 +393,20 @@
     padding: 1rem;
   }
   .portfolio__project {
-    margin-top: 3rem;
+    margin-top: 1rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2.5rem;
+    gap: 1.5rem;
   }
   .portfolio__figure {
     width: 100%;
     max-width: 21rem;
   }
   .portfolio__figure--tablet {
+    display: flex;
+  }
+  .portfolio__figure--laptop {
     display: flex;
   }
   .portfolio__title {
@@ -405,9 +421,6 @@
 }
 /* Media Query for desktop screen */
 @media screen and (min-width: 1440px) {
-  .portfolio {
-    padding: 1rem;
-  }
   .portfolio__project {
     margin-top: 2rem;
     display: flex;
@@ -539,12 +552,17 @@
   text-decoration: none;
 }
 
-/* this base font size allows to control the scaling across the whole project */
+/* This base font size allows to control the scaling across the whole project */
 html {
   font-size: 16px;
   scroll-behavior: smooth;
 }
 
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 17px;
+  }
+}
 @media screen and (min-width: 1024px) {
   html {
     font-size: 19px;
