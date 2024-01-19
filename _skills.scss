@@ -38,7 +38,7 @@
 }
 
 /* Media Query for tablet screen */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: $breakpoint-tablet) {
 
     .skills {
         display: flex;
@@ -47,7 +47,7 @@
 }
 
 /* Media Query for desktop screen */
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: $breakpoint-desktop) {
 
     .skills {
         margin: 0 4rem;

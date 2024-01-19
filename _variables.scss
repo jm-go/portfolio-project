@@ -10,3 +10,11 @@ $color-black: #000000;
 $color-dark: #25282d;
 $color-header: #383838;
 $color-pink: #AA336A;
+
+/* Breakpoints for media queries */
+$breakpoint-mobile: 320px;
+$breakpoint-mobile-large: 425px;
+$breakpoint-tablet: 768px;
+$breakpoint-laptop: 1024px;
+$breakpoint-desktop: 1440px;
+$breakpoint-large-desktop: 2560px;

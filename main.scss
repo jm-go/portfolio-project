@@ -17,20 +17,27 @@
     text-decoration: none;
 }
 
-/* this base font size allows to control the scaling across the whole project */
+/* This base font size allows to control the scaling across the whole project */
 html {
     font-size: 16px;
     scroll-behavior: smooth;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: $breakpoint-tablet) {
+
+    html {
+        font-size: 17px;
+    }
+}
+
+@media screen and (min-width: $breakpoint-laptop) {
 
     html {
         font-size: 19px;
     }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: $breakpoint-desktop) {
 
     html {
         font-size: 21px;
